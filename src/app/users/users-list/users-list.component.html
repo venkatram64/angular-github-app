@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row" *ngIf="users">
+        <div class="col-4" *ngFor="let user of users | async">
+            <div class="card">
+                <div class="card-body">
+                    <a routerLink="/users/{{user.login}}">{{user.login}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

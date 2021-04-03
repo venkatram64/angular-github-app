@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+step 1 :
+create module
+ng g module users --routing
+step 2: under users module 
+create users-list
+ng g c users\users-list
+
+
+ng g class model\contact
+
+ ng g class model\user

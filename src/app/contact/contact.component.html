@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Contact Us</h1>
+  <form #contactForm="ngForm" (ngSubmit)="submitContactForm()">    
+    
+    <!--{{contactForm.value | json}}
+    <hr/>-->
+    {{contact | json}}
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" required #userName="ngModel" 
+          [class.is-invalid]="userName.invalid && userName.touched" class="form-control" 
+                    name="userName" [(ngModel)]="contact.userName">
+    </div>
+    <!--{{userName.className}}-->
+    {{userName.untouched}}
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" required #email="ngModel" 
+        [class.is-invalid]="email.invalid && email.touched"
+        name="email" [(ngModel)]="contact.email">
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tele" class="form-control" required #phone="ngModel" pattern="^\d{10}$"
+              [class.is-invalid]="phone.invalid && phone.touched"
+              name="phone" [(ngModel)]="contact.phone">
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control" name="message" required
+          #message="ngModel" [class.is-invalid]="message.invalid && message.touched"
+          [(ngModel)]="contact.message"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+</div>
+
+<router-outlet></router-outlet>
+ 

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="card" *ngIf="user">
+    <div class="card-body">
+      <img [src]="user.avatar_url">
+      <h2>{{user.login}}</h2>
+    </div>
+  </div>   
+</div>
+
+<router-outlet></router-outlet>
+
+

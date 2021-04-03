@@ -1,0 +1,5 @@
+.my-image {
+    background-image: url('/assets/pexels-karolina-grabowska-5478103.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+}
